@@ -24,15 +24,44 @@ This project requires no build, test, or compilation commands. It's a simple HTM
 
 ## Architecture
 
-- **Single file structure**: Everything contained in one index.html file
+- **Single file structure**: Everything contained in one index.html file with embedded CSS and JavaScript
 - **No external dependencies**: Uses vanilla HTML, CSS, and JavaScript
-- **Mobile-first design**: Optimized for vertical mobile screens
-- **Simple game mechanics**: Basic Flappy Bird clone with minimal features
+- **Mobile-first design**: Optimized for vertical mobile screens with responsive canvas
+- **Screen-based UI**: Multiple overlay screens (start, settings, game over) managed via display toggling
+- **Configurable game system**: Settings object controls all game parameters with preset difficulty levels
+
+### Game Structure
+
+The game follows a simple state-based architecture:
+
+1. **UI Screens**:
+   - Start screen with game/settings buttons
+   - Settings screen with configurable parameters and difficulty presets
+   - Game canvas for active gameplay
+   - Game over screen with restart option
+
+2. **Game Settings System**:
+   - `gameSettings` object contains all configurable parameters
+   - Preset difficulty levels (Easy, Normal, Hard, Expert)
+   - Real-time settings application without restart required
+   - Manual parameter adjustment for fine-tuning
+
+3. **Game Loop**:
+   - Canvas-based rendering with `requestAnimationFrame`
+   - Physics simulation for bird movement (gravity, velocity, jumping)
+   - Collision detection between bird and pipes/boundaries
+   - Dynamic pipe generation and cleanup
+
+4. **Input Handling**:
+   - Touch/click events for mobile-first design
+   - Keyboard support (spacebar) for desktop testing
+   - Unified jump function across all input methods
 
 ## Development Notes
 
-- Keep the code simple and readable for educational purposes
-- Focus on mobile vertical layout optimization
-- Avoid complex libraries or frameworks
-- Ensure the game works across different mobile screen sizes
-- The target audience is a beginner, so code should be educational and well-commented
+- Game parameters are centralized in the `gameSettings` object for easy modification
+- All game variables are updated via `updateGameVariables()` when settings change
+- Canvas automatically resizes to fit container while maintaining aspect ratio
+- Target audience is beginners, so code structure prioritizes readability over optimization
+- Settings persist during game session but reset on page reload
+- Mobile viewport optimization prevents zooming and ensures proper touch handling
