@@ -62,15 +62,15 @@ The game includes a comprehensive settings system:
 ## 📸 Screenshots
 
 ### Main Menu
-![Main Menu](screenshot-menu.png)
+![Main Menu](images/screenshot-menu.png)
 *Clean, simple interface with easy navigation*
 
 ### Gameplay
-![Gameplay](screenshot-game.png)
+![Gameplay](images/screenshot-game.png)
 *Smooth, responsive bird movement with colorful graphics*
 
 ### Settings Screen
-![Settings Screen](screenshot-settings.png)
+![Settings Screen](images/screenshot-settings.png)
 *Comprehensive settings with difficulty presets and custom options*
 
 ## 🎯 Perfect For
