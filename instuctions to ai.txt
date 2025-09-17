@@ -1,0 +1,9 @@
+I am a child 11 years old. I don't know anything about programming.
+Help me build very simple Flappy Bird game.
+Requirements:
+1. single file game (index.html)
+2. run in browser
+3. very simple (HTML + JS)
+4. single option game
+5. ready to deploy to my remote web server
+6. make it mobile vertical layout view only (support small and larger screens) 
